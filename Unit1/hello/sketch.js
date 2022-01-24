@@ -7,5 +7,5 @@ function draw() {
   background('blue') ;
   fill('white') ;
   textSize(32) ;
-  text("Uchiha Obito ((o)))))", 250, 250) ;
+  text("Obito ((o)))))", 250, 250) ;
 }
