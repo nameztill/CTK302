@@ -8,7 +8,15 @@ function setup() {
 }
 
 function draw() {
-
+  timer++ ;
+  if(timer > 2*80) {
+    timer = 0;
+    myState++ ;
+    if (myState > 1) {
+      myState = 0;
+    }
+  }
+  
   switch (myState){
     case 0:
     background('grey');
