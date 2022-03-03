@@ -47,9 +47,3 @@ fill('white');
  ellipse(262,313,80,10);
  ellipse(8,40,90,20);
 }
-
-function mouseReleased(){
-  if ((mouseX > 100) && (mouseX < 200) && (mouseY > 100) && (mouseY < 200)){
-    myState++ ;
-    if (myState > 1) myState = 0;
-  }
