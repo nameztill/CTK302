@@ -1,6 +1,7 @@
 let x = 0;
 
 function setup() {
+  background
   createCanvas(800, 800);
 }
 
