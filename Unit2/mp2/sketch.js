@@ -14,6 +14,8 @@ function setup() {
   // song1.pause();
   // song2.loop();
   // song2.pause();
+  noStroke();
+
 }
 
 function draw() {
