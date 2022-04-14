@@ -18,7 +18,6 @@ function setup() {
 //
 // }
 function draw() {
-  background('#E0CFDE');
   cars.push(new Car()) ;
 
 
