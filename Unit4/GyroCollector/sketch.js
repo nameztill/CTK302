@@ -52,7 +52,7 @@ function draw() {
   translate(xPosition, yPosition); // move everything over by x, y
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
-  // draw the FROG
+  // draw the FROG/**************************************************
   // image(bunnyImage, 0, 0, 500, 500);
   fill('green');
   ellipse(0, 0, 80, 80);

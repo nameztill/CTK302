@@ -8,7 +8,7 @@ let humidity = 0;
 let description = 0;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(500, 500);
 
   // HERE is the call to get the weather. We build the string first.
 
@@ -59,8 +59,16 @@ function draw() {
       y = map(temperature, -10, 100, 5, height-10);
       rect(width-30, height-10, 10, -temperature);
 
-      // cloud
+      //sun
+      noStroke();
+      fill('#FFFF00');
+      ellipse(250,190,110,110);
+      fill('#FFEA00');
+      ellipse(250,190,90,90);
+      fill('#FFDE00');
+      ellipse(250,190,50,50);
 
+      // cloud
       push();
       translate(x, 0);
       fill("white");
