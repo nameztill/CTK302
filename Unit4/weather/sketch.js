@@ -6,6 +6,7 @@ let windspeed = 0;
 let temperature = 0;
 let humidity = 0;
 let description = 0;
+let font1
 let x1 =0;
 let x2 =0;
 let x3 =0;
@@ -13,6 +14,7 @@ let x4 =0;
 
 function setup() {
   createCanvas(500, 500);
+  font1 = loadFont("assets/pla.otf");
 
   // HERE is the call to get the weather. We build the string first.
 
@@ -54,11 +56,14 @@ function draw() {
 
     case 1:
       fill("black");
-      text("What is the weather in " + weather.name + "?", 20, 20);
-      text("windspeed is " + windspeed, 20, 40);
-      text("temperature is " + temperature, 20, 60);
-      text("humidity is " + humidity, 20, 80);
-      text(description, 20, 100);
+      textFont(font1);
+      textSize(20);
+      text("What is the weather in " + weather.name + "?", 20, 30);
+      textSize(15);
+      text("Windspeed is " + windspeed, 20, 60);
+      text("Temperature is " + temperature, 20, 80);
+      text("Humidity is " + humidity, 20, 100);
+      text(description, 20, 120);
 
       y = map(temperature, -10, 100, 5, height-10);
       rect(width-30, height-10, 10, -temperature);
@@ -78,7 +83,7 @@ function draw() {
       push();
       translate(x, 0);
 
-      fill(255, humidity * 3);
+      fill(255, humidity * 4);
       //1st cloud
       ellipse(65,40,100,30);
       ellipse(10,40,100,50);
@@ -99,7 +104,7 @@ function draw() {
       push();
       translate(x2, 0);
 
-      fill(255, humidity * 7);
+      fill(255, humidity * 8);
       //3rd cloud
       ellipse(50,260,270,30);
       ellipse(23,208,100,70);
@@ -110,7 +115,7 @@ function draw() {
       push();
       translate(x3, 0);
 
-      fill(255, humidity * 9);
+      fill(255, humidity * 7);
       //4th cloud
       ellipse(318,295,130,50);
       ellipse(262,313,80,10);
@@ -120,6 +125,8 @@ function draw() {
       pop();
       push();
       translate(x4, 0);
+
+      fill(255, humidity * 5);
       //5th cloud
       ellipse(53,395,230,40);
       ellipse(209,400,230,20);
